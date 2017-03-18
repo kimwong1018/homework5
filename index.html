@@ -218,8 +218,30 @@ option = {
         });
     </script>
     
-     <div style="color:black; background-color: lightblue; text-align: left; padding: 10px 10px 10px 10px;">香港近20年的消費物價指數起伏不斷，1999年至2004年由於經歷金融風暴和沙士影響，錄得通縮。由2005年起，消費物價指數開始攀升。2011年至2016年的消費物價指數合共上升23.5%，而2011年至2016年的所有僱員的月薪中位數增幅為26.9%，可見消費物價指數的增幅較月薪中位數的增幅少。因此，香港人的薪資增幅實際上是高過通脹率。
+     <div style="color:black; background-color: lightblue; text-align: left; padding: 10px 10px 10px 10px;">香港近20年的消費物價指數起伏不斷，1999年至2004年由於經歷金融風暴和沙士影響，錄得通縮。由2005年起，消費物價指數開始攀升。2011年至2016年的消費物價指數合共上升23.5%，而2011年至2016年的所有僱員的月薪中位數增幅為26.9%，可見消費物價指數的增幅較月薪中位數的增幅少。因此，香港人的薪資增幅實際上是高過通脹率。</div>
+ 
+    <!-- Chart 3 Script  -->
+                    <div id="main3" ></div>
+    <script type="text/javascript">
+        $(function() {
+           
+            $.getJSON("option.json", function(data) {
+                var option3 = data;
+                var myChart3 = echarts.init(document.getElementById('main3'));
+                
+                myChart3.setOption(option3);
+            })
+        });
+    </script>
 
+    <footer class="footer" style="background-color: white;text-align: center">
+        <div class="container">
+                <br>source@ <a href="https://data.gov.hk/tc-data/dataset/hk-censtatd-tablechart-aehs">收入及工時統計數字</a>
+                <br>code reference: <a href="http://echarts.baidu.com/demo.html#area-stack">echarts</a></p>
+
+    </footer>
+
+    
 </body>
 
 </html>
