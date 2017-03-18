@@ -115,21 +115,17 @@
         <div id="main1" style="width: 600px;height:400px;"></div>
 
     <h2>香港近20年的綜合消費物價指數</h2>
-    <script type="text/javascript">
-        // jQuery conventional framework.
-        // This ensures the code block is executed after whole document is ready
+         <script type="text/javascript">
         $(function() {
-            // Argument 1: URL to the external JSON file
-            // Argument 2: The placeholder variable of the data loaded from external JSON file
-            $.getJSON('option.json', function(data) {
-                // When entering this part, variable "data" holds the Javascript object 
-                // corresponding to the external JSON file
+            $.getJSON("option.json", function(data) {
+                console.log(data);
+                var myChart = echarts.init(document.getElementById('main'));
                 var option = data;
-                var myChart1 = echarts.init(document.getElementById('main1'));
-                myChart1.setOption(option);
+                myChart.setOption(option);
             })
         });
     </script>
+
 
 </body>
 
