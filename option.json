@@ -3,9 +3,7 @@
         "text": "私人房屋租金開支升幅"
     },
         "data": ["Percentage"],
-        "align": "left",
-        "top": 20,
-        "left": 10
+        "align": "left"
     },
     "xAxis": [{
         "type": "category",
