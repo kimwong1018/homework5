@@ -1,11 +1,13 @@
 <html>
 
 <head>
+    
     <meta charset="utf-8">
+    <title>kamkiwong Homework 5</title>
+    <!-- Use echarts.js -->
+    <script src="echarts.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homework 5</title>
-    <script src="echarts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="map.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,14 +16,13 @@
 
 <body style="background-color: #fcd1b3; text-align: center; color: #033770;">
        <h3> 香港人的收入追不上通脹？</h3>
-    <!-- Prepare the DOM element to be held by eCharts -->
-    <div id="main1" style="width: 600px;height:400px;"></div>
-    <div id="main2" style="width: 600px;height:400px;"></div>
-
+       <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
-        // Initialse eCharts
-        
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
 
+        // 指定图表的配置项和数据
         option = {
             title: {
         text: '按性別劃分的每月工資中位數',
@@ -105,7 +106,8 @@
         }
     ]
 };
-
+  // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
 
 </body>
 
