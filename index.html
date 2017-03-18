@@ -115,10 +115,11 @@
         <div style= "color:#033770; text-align: left;"><h1>香港近20年的綜合消費物價指數</h1>  </div>
        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="chart" style="width: 1000px;height:600px;"></div>
+     <!--chart2-->
     <script type="text/javascript">
-                $(function() {
+        $(function() {
             var myChart2 = echarts.init(document.getElementById('main2'));
-        // 指定图表的配置项和数据
+
   
 option = {
     color: ['#3398DB'],
@@ -157,7 +158,6 @@ option = {
         }
     ]
 };
-
             myChart2.setOption(option);
         });
     </script>
