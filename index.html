@@ -31,7 +31,7 @@
         trigger: 'axis'
     },
     legend: {
-        data:['男性','女性']
+        data:['所有僱員','男性','女性']
     },
     toolbox: {
         show: true,
@@ -57,6 +57,22 @@
         }
     },
     series: [
+               {
+            name:'所有僱員',
+            type:'line',
+            data:[12800,13400,14100, 14800, 15500, 16200],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
+            },
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'}
+                ]
+            }
+        },
         {
             name:'男性',
             type:'line',
