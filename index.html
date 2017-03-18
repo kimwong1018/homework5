@@ -113,15 +113,15 @@
          </div>
     <br>
          <!--chart2-->
-        <div style= "color:#033770; text-align: left;"><h1>香港近20年的綜合消費物價指數</h1>  </div>
-       <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="chart" style="width: 800px;height:400px;"></div>
     <script type="text/javascript">
         $(function() {
             var myChart2 = echarts.init(document.getElementById('main2'));
 
   
 option = {
+      title: {
+                    text: '香港近20年的綜合消費物價指數',
+                },
     color: ['#3398DB'],
     tooltip : {
         trigger: 'axis',
