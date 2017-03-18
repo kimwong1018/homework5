@@ -111,6 +111,85 @@
      <div style="color:black; background-color: lightblue; text-align: left; padding: 10px 10px 10px 10px;">從以上圖表可見，男性的月薪中位數長年高於女性，而男性月薪中位數的升幅亦同樣比女性月薪中位數升幅高。從2011年到2016年，男性月薪中位數升近29.6%，而女性月薪中位數升幅只有28.1%，反映出男女薪資不同的問題。
 
          </div>
+        <div style= "color:#033770; text-align: left;"><h2>香港近20年的綜合消費物價指數</h2>  </div>
+       <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1000px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+        "title": {
+        "text": "香港近20年的綜合消費物價指數"
+    },
+    "legend": {
+        "data": ["Percentage"],
+        "align": "left",
+        "top": 20,
+        "left": 10
+    },
+    "xAxis": [{
+        "type": "category",
+        "data": [
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016
+        ],
+        "axisTick": {
+            "alignWithLabel": true
+        }
+    }],
+    "yAxis": [{
+        "type": "value"
+    }],
+    "series": [{
+        "name": "Percentage",
+        "type": "bar",
+        "data": [
+            5.8,
+            2.8,
+            -4.0,
+            -3.8,
+            -1.6,
+            -3.0,
+            -2.6,
+            -0.4,
+            1.0,
+            2.0,
+            2.0,
+            4.3,
+            0.5,
+            2.4,
+            5.3,
+            4.1, 
+            4.3,
+            4.4,
+            3.0,
+            2.4
+        ]
+    }]
+}
+          // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        </script>
 
 </body>
 
