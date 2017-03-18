@@ -1,43 +1,85 @@
 
 {
-    "title": {
-        "text": "Hong Kong Population by gender"
+             title: {
+        text: '按性別劃分的每月工資中位數',
+        subtext: ''
     },
-    "legend": {
-        "data": ["Male", "Female"],
-        "align": "left",
-        "top": 20,
-        "left": 10
+    tooltip: {
+        trigger: 'axis'
     },
-    "xAxis": [{
-        "type": "category",
-        "data": [
-            1991,
-            1996,
-            2001
-        ],
-        "axisTick": {
-            "alignWithLabel": true
+    legend: {
+        data:['男性','女性']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
         }
-    }],
-    "yAxis": [{
-        "type": "value"
-    }],
-    "series": [{
-        "name": "Male",
-        "type": "bar",
-        "data": [
-            2811991,
-            3108107,
-            3285344
-        ]
-    }, {
-        "name": "Female",
-        "type": "bar",
-        "data": [
-            2710290,
-            3109449,
-            3423045
-        ]
-    }]
-}
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: ['2011','2012','2013','2014','2015','2016']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value} ＄'
+        }
+    },
+    series: [
+        {
+            name:'男性',
+            type:'line',
+            data:[14200,15000,15800, 16500, 17600, 18400],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
+            },
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'女性',
+            type:'line',
+            data:[11000, 11700, 12200, 12700, 13600, 14100],
+            markPoint: {
+                data: [
+                    {name: '工資最低', value: -2, xAxis: 1, yAxis: -1.5}
+                ]
+            },
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: '最大值'
+                            }
+                        },
+                        type: 'max',
+                        name: '最高点'
+                    }]
+                ]
+            }
+        }
+    ]
+};
+ 
