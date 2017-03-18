@@ -1,83 +1,68 @@
 {
-             title: {
-        text: '按性別劃分的每月工資中位數',
-        subtext: ''
+    "title": {
+        "text": "香港近20年的綜合消費物價指數"
     },
-    tooltip: {
-        trigger: 'axis'
+    "legend": {
+        "data": ["Percentage"],
+        "align": "left",
+        "top": 20,
+        "left": 10
     },
-    legend: {
-        data:['男性','女性']
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            dataView: {readOnly: false},
-            magicType: {type: ['line', 'bar']},
-            restore: {},
-            saveAsImage: {}
+    "xAxis": [{
+        "type": "category",
+        "data": [
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016
+        ],
+        "axisTick": {
+            "alignWithLabel": true
         }
-    },
-    xAxis:  {
-        type: 'category',
-        boundaryGap: false,
-        data: ['2011','2012','2013','2014','2015','2016']
-    },
-    yAxis: {
-        type: 'value',
-        axisLabel: {
-            formatter: '{value} ＄'
-        }
-    },
-    series: [
-        {
-            name:'男性',
-            type:'line',
-            data:[14200,15000,15800, 16500, 17600, 18400],
-            markPoint: {
-                data: [
-                    {type: 'max', name: '最大值'},
-                    {type: 'min', name: '最小值'}
-                ]
-            },
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'}
-                ]
-            }
-        },
-        {
-            name:'女性',
-            type:'line',
-            data:[11000, 11700, 12200, 12700, 13600, 14100],
-            markPoint: {
-                data: [
-                    {name: '工資最低', value: -2, xAxis: 1, yAxis: -1.5}
-                ]
-            },
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
-        }
-    ]
+    }],
+    "yAxis": [{
+        "type": "value"
+    }],
+    "series": [{
+        "name": "Percentage",
+        "type": "bar",
+        "data": [
+            5.8,
+            2.8,
+            -4.0,
+            -3.8,
+            -1.6,
+            -3.0,
+            -2.6,
+            -0.4,
+            1.0,
+            2.0,
+            2.0,
+            4.3,
+            0.5,
+            2.4,
+            5.3,
+            4.1, 
+            4.3,
+            4.4,
+            3.0,
+            2.4
+        ]
+    }]
 }
