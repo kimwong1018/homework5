@@ -20,10 +20,9 @@
     <script type="text/javascript">
         $(function() {
             $.getJSON("option.json", function(data) {
-                console.log(data);
-                var myChart = echarts.init(document.getElementById('main'));
                 var option = data;
-                myChart.setOption(option);
+                var myChart1 = echarts.init(document.getElementById('main1'));
+                myChart1.setOption(option);
             })
         });
     </script>
